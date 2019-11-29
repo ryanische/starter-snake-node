@@ -46,6 +46,8 @@ const notFoundHandler = (err, req, res, next) => {
 }
 
 const genericErrorHandler = (err, req, res, next) => {
+  console.log(err);
+
   const statusCode = err.status || 500
 
   res.status(statusCode)
