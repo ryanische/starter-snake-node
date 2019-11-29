@@ -187,13 +187,13 @@ class SnakeGame {
     const rand = Math.random();
     let sum = 0;
 
-    scores.forEach(s => {
+    for (const s of scores) {
       const chance = s.score / totalScore;
       sum += chance;
       if (rand <= sum) {
         return s.move;
       }
-    });
+    }
 
     return scores[scores.length - 1].move;
   }
